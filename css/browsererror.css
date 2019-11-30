@@ -1,0 +1,71 @@
+@font-face {
+	font-family: 'Conv_HelveticaNeueLTCom-BdCn';
+	src: url('../fonts/HelveticaNeueLTCom-BdCn.eot');
+	src: local('‚ò∫'), url('../fonts/HelveticaNeueLTCom-BdCn.woff') format('woff'), url('../fonts/HelveticaNeueLTCom-BdCn.ttf') format('truetype'), url('../fonts/HelveticaNeueLTCom-BdCn.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+#browser-error{
+	display: none;
+	position: relative;
+	margin: 20px;
+	width:300px;
+	height:135px;
+	left: 50%;
+	margin:30px 0 8px -150px;
+	color:#6294d1;
+	background:  url('../images/ui/browser-bg.png') no-repeat;
+}
+#browser-error h1{
+	font-family:'Conv_HelveticaNeueLTCom-BdCn',Sans-Serif;
+	font-weight: normal;
+	font-size: 16px;
+	text-align: center;
+	text-transform: uppercase;
+}
+#browser-error h2{
+	text-align: center;
+	padding: 15px 0 3px 0;
+	/*	padding: 10px;*/
+	font-family:'Conv_HelveticaNeueLTCom-BdCn',Sans-Serif;
+	font-weight: normal;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+#browser-error-container{
+	position: relative;
+	left:50%;
+	width: 300px;
+	margin-left: -110px;
+}
+#browser-error-container a{
+	position: relative;
+	float: left;
+	width: 44px;
+	height:47px;
+	margin: 0px 0 0 10px;
+}
+#browser-l-1{
+	background:  url('../images/ui/browser-btn-1.png') no-repeat 0 -41px;
+}
+#browser-l-2{
+	background:  url('../images/ui/browser-btn-2.png') no-repeat 0 -47px;;
+}
+#browser-l-3{
+	background:  url('../images/ui/browser-btn-3.png') no-repeat 0 -41px;
+}
+#browser-l-4{
+	background:  url('../images/ui/browser-btn-4.png') no-repeat 0 -41px;
+}
+#browser-l-1:hover{
+	background-position:0 6px;
+}
+#browser-l-2:hover{
+	background-position:0 0px;
+}
+#browser-l-3:hover{
+	background-position:0 6px;
+}
+#browser-l-4:hover{
+	background-position:0 6px;
+}

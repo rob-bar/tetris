@@ -1,0 +1,658 @@
+/*
+tetrisstyle.css
+portfolio_trunk
+Created by Robbie on 2012-02-22.
+Copyright 2012 __MyCompanyName__. All rights reserved.
+*/
+/* ========= */
+/* = Fonts = */
+/* ========= */
+@font-face {
+font-family: 'Conv_FuturaStd-Condensed';
+src: url('../fonts/FuturaStd-Condensed.eot');
+src: local('☺'),url('../fonts/FuturaStd-Condensed.woff') format('woff'),url('../fonts/FuturaStd-Condensed.ttf') format('truetype'),url('../fonts/FuturaStd-Condensed.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Conv_FuturaStd-CondensedLight';
+src: url('../fonts/FuturaStd-CondensedLight.eot');
+src: local('☺'),url('../fonts/FuturaStd-CondensedLight.woff') format('woff'),url('../fonts/FuturaStd-CondensedLight.ttf') format('truetype'),url('../fonts/FuturaStd-CondensedLight.svg') format('svg');
+font-weight: 100;
+font-style: normal;
+}
+@font-face {
+font-family: 'Conv_FuturaStd-Medium';
+src: url('../fonts/FuturaStd-Medium.eot');
+src: local('☺'),url('../fonts/FuturaStd-Medium.woff') format('woff'),url('../fonts/FuturaStd-Medium.ttf') format('truetype'),url('../fonts/FuturaStd-Medium.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Conv_FuturaStd-CondensedBold';
+src: url('../fonts/FuturaStd-CondensedBold.eot');
+src: local('☺'),url('../fonts/FuturaStd-CondensedBold.woff') format('woff'),url('../fonts/FuturaStd-CondensedBold.ttf') format('truetype'),url('../fonts/FuturaStd-CondensedBold.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+/* ============= */
+/* = PRELOADER = */
+/* ============= */
+.wrapper {
+	position:absolute;
+	top:50%;
+	left:50%;
+}
+/* =========== */
+/* = General = */
+/* =========== */
+p,form,img,h1,h2,h3,h4,h5,h6,ul,ol,li,html,body,input,button,textarea {
+margin: 0;
+padding: 0;
+}
+.hide {
+left: -10000px;
+position: absolute;
+}
+a,input,textarea,button {
+outline: none;
+}
+a img {
+border: none;
+}
+html {
+height: 100%;
+}
+body {
+background-color: #000000;
+font-family: Arial,Helvetica,sans-serif;
+height: 100%;
+}
+cufon {
+text-indent: 0!important;
+}
+/* ========= */
+/* = Intro = */
+/* ========= */
+#intro {
+margin-left: -520px;
+width: 1024px;
+height: 680px;
+left: -50%;
+top: -40px;
+position: fixed;
+background: url('../images/tetris/intro__.jpg') no-repeat;
+}
+#buttons-introscreen {
+width: 113px;
+height: 88px;
+margin: 0;
+margin-left: -56px;
+position: absolute;
+left: 50%;
+top: 280px;
+}
+#buttons-introscreen a {
+float: left;
+text-align: center;
+}
+#btn-1 {
+width: 93px;
+height: 44px;
+margin: 0 10px;
+background-image: url('../images/tetris/btn-1-playgame.png');
+position: relative;
+position: static/relative/absolute/fixed;
+}
+#btn-2 {
+width: 111px;
+height: 44px;
+top: -8px;
+margin: 0 1px;
+background-image: url('../images/tetris/btn-2-instructions.png');
+position: relative;
+}
+#btn-2:hover {
+background-position: -112px;
+}
+#btn-1:hover {
+background-position: -93px;
+}
+/* ============= */
+/* = Main Game = */
+/* ============= */
+#game {
+margin-left: -520px;
+width: 1024px;
+height: 768px;
+left: -512px;
+top: -40px;
+position: fixed;
+background: url('../images/tetris/ingame_bg.jpg') no-repeat;
+}
+#fallingfield {
+position: relative;
+background: url('../images/tetris/playfield.png') no-repeat;
+display: block;
+left: 325px;
+width: 328px;
+position: absolute;
+top: 41px;
+}
+#canvas-fallingfield {
+position: relative;
+margin: 19px 14px;
+}
+#previewfield {
+background: url('../images/tetris/previewfield.png') no-repeat;
+display: block;
+width: 140px;
+left: 500px;
+position: absolute;
+top: 47px;
+}
+#canvas-previewfield {
+position: relative;
+margin: 13px 13px 9px 11px;
+}
+#scorefield {
+color: #dedede;
+font-size: 19px;
+font-family: 'Conv_FuturaStd-CondensedLight';
+text-shadow: 1px 1px 1px #000000;
+position: absolute;
+background: url('../images/tetris/scoreboard.png') no-repeat;
+display: block;
+left: 500px;
+top: 47px;
+width: 122px;
+height: 57px;
+top: 178px;
+line-height: 1.1em;
+padding: 17px 0px 17px 17px;
+}
+#scorefield span {
+font-family: 'Conv_FuturaStd-Condensed';
+}
+#controls {
+position: absolute;
+left: 641px;
+top: 259px;
+width: 85px;
+}
+#game div a {
+position: relative;
+float: left;
+width: 85px;
+height: 42px;
+margin-bottom: -10px;
+left: -105px;
+}
+#game div a:hover {
+background-position: -85px 0;
+}
+#btn-3 {
+background-image: url('../images/tetris/btn-3-replay.png');
+}
+#btn-4 {
+background-image: url('../images/tetris/btn-4-pause.png');
+}
+#btn-5 {
+background-image: url('../images/tetris/btn-5-facebook.png');
+}
+#btn-6 {
+background-image: url('../images/tetris/btn-6-twitter.png');
+}
+#btn-7 {
+background-image: url('../images/tetris/btn-7-google.png');
+}
+#fb-bg {
+position: relative;
+width: 71px;
+height: 19px;
+left: 28px;
+top: -2px;
+padding: 6px 3px ;
+background-image: url('../images/tetris/fb-loginbg.png');
+}
+#btn-8:hover {
+background-position: -131px 0;
+}
+#btn-8 {
+position: relative;
+float: left;
+width: 131px;
+height: 32px;
+left: 2px;
+top: 0px;
+background-image: url('../images/tetris/no-fb-btn.png');
+}
+#btn-9 {
+background-image: url('../images/tetris/btn-9-replay.png');
+}
+#btn-10 {
+background-image: url('../images/tetris/btn-10-fb.png');
+}
+#btn-11 {
+background-image: url('../images/tetris/btn-11-twitter.png');
+}
+#btn-12 {
+background-image: url('../images/tetris/btn-12-yes.png');
+}
+#btn-13 {
+background-image: url('../images/tetris/btn-13-no.png');
+}
+#shares {
+position: absolute;
+left: 641px;
+top: 340px;
+width: 85px;
+}
+#fallingfield p {
+position: absolute;
+left: 200px;
+top: 200px;
+font-size: 36px;
+font-family: 'Conv_FuturaStd-CondensedLight';
+text-shadow: 0px 0px 2px #000000;
+color: #FFFFFF;
+}
+#fallingfield sup {
+font-size: 16px;
+}
+#fallingfield div {
+position: absolute;
+height: 30px;
+width: 300px;
+margin-left: 12px;
+margin-top: 17px;
+padding: 2px;
+left: 0px;
+top: 0px;
+}
+#fallingfield span {
+position: relative;
+float: left;
+background: url('../images/tetris/white.png') no-repeat 2px 2px;
+height: 30px;
+width: 30px;
+}
+/* =============== */
+/* = LOGIN FIELD = */
+/* =============== */
+#enter-name {
+top: -25%;
+left: 50%;
+margin-left: -76px;
+position: fixed;
+height: 92px;
+width: 134px;
+background: url("../images/tetris/enter_name_bg.png") no-repeat scroll 0 0 transparent;
+}
+#enter-name p {
+font-family: 'Conv_FuturaStd-Condensed';
+text-align: center;
+text-transform: uppercase;
+color: #3e3e3e;
+font-size: 18px;
+margin-top: 19px;
+}
+/*
+#enter-name span {
+opacity: 0;
+position: absolute;
+font-family: 'Conv_FuturaStd-Medium';
+padding-top: 3px;
+margin-left: 15px;
+margin-top: 1px;
+text-align: center;
+color: #dc4c4c;
+font-size: 12px;
+width: 142px;
+height: 20px;
+background: url("../images/tetris/txt-bg-error.png") no-repeat scroll 0 0 transparent;
+}
+*/
+#txt-name {
+background: url("../images/tetris/txt_bg.png") no-repeat scroll 0 0 transparent;
+font-family: 'Conv_FuturaStd-Medium';
+border: medium none;
+color: #000000;
+height: 21px;
+margin: 1px 0 0 16px;
+font-size: 12px;
+padding: 1px 5px;
+width: 92px;
+}
+/* ============= */
+/* = Game over = */
+/* ============= */
+#game-over {
+background: url("../images/tetris/game-over-bg.png") no-repeat scroll 0 0 transparent;
+top: -350px;
+left: 50%;
+margin-left: -114px;
+position: fixed;
+height: 124px;
+width: 243px;
+}
+#game-over p {
+font-family: 'Conv_FuturaStd-CondensedBold';
+text-align: center;
+font-size: 55px;
+margin-top: 42px;
+color: #611717;
+text-shadow: #2c0b0b 0px -2px 1px;
+}
+#marker-cont {
+height: 48px;
+left: 27px;
+overflow: hidden;
+position: absolute;
+top: -37px;
+width: 188px;
+}
+#badges {
+height: 94px;
+left: 200px;
+overflow: hidden;
+position: absolute;
+top: -20px;
+width: 63px;
+}
+.highscoreMarker {
+display: none;
+position: absolute;
+}
+.Badge {
+display: none;
+}
+/* ============== */
+/* = ScoreBoard = */
+/* ============== */
+#score-board {
+background: url("../images/tetris/scoreboard-bg.png") no-repeat scroll 0 0 transparent;
+top: -350px;
+left: 50%;
+margin-left: -162px;
+position: fixed;
+height: 325px;
+width: 339px;
+}
+#tbl-container {
+position: relative;
+top: 56px;
+left: 17px;
+width: 305px;
+height: 190px;
+overflow: hidden;
+border-style: solid;
+border-color: #828383;
+border-width: 0 0 1px 0;
+}
+#tbl-container a {
+position: absolute;
+width: 305px;
+height: 22px;
+opacity: 0.2;
+-moz-opacity: 0.2;
+filter: alpha(opacity=0.2);
+}
+#tbl-container a:hover {
+opacity: 0.8;
+-moz-opacity: 0.8;
+filter: alpha(opacity=0.8);
+}
+#up {
+top: 0px;
+left: 0px;
+background: url("../images/tetris/up.png") no-repeat scroll 0 0 transparent;
+}
+#down {
+top: 168px;
+left: 0px;
+background: url("../images/tetris/down.png") no-repeat scroll 0 0 transparent;
+}
+#tbl-head {
+border-collapse: collapse;
+top: 56px;
+left: 17px;
+margin: 0px;
+padding: 0px;
+position: relative;
+width: 305px;
+}
+#tbl-head tr th {
+font-family: 'Conv_FuturaStd-Medium',Sans-Serif;
+border-style: solid;
+border-color: #d8d8d8;
+font-size: 12px;
+line-height: 18px;
+font-weight: normal;
+}
+#tbl-body {
+border-collapse: collapse;
+margin: 0px;
+padding: 0px;
+position: relative;
+width: 305px;
+top: 0px;
+color: #5b5a5a;
+border-style: solid;
+border-color: #d8d8d8;
+border-width: 0 0 1px 0;
+}
+#tbl-body tr td {
+background-color: rgba(255,255,255,0.80);
+font-family: 'Conv_FuturaStd-Medium',Sans-Serif;
+border-style: solid;
+border-color: #d8d8d8;
+font-size: 12px;/*height:20px;*/
+line-height:16px;/*padding-top:2px;*/
+font-weight:normal;
+}
+.col1 {
+border-left-width: 0px;
+border-width: 1px 0 0 0;
+text-align: center;
+width: 38px;
+}
+.col2 {
+border-width: 1px 0 0 1px;
+text-align: center;
+width: 59px;
+}
+.col3 {
+border-width: 1px 0 0 1px;
+text-align: left;
+width: 126px;
+text-indent: 5px;
+}
+.col4 {
+border-width: 1px 0 0 1px;
+text-align: center;
+}
+#score-board-btns {
+position: absolute;
+left: 17px;
+top: 279px;
+width: 305px;
+height: 30px;
+padding-left: 20px;
+}
+#score-board-btns a {
+float: left;
+width: 75px;
+height: 32px;
+margin-left: 10px;
+}
+#score-board-btns a:hover {
+background-position: -75px 0;
+}
+.myscore {
+color: #4141b1;
+}
+/* ================ */
+/* = Are You Sure = */
+/* ================ */
+#sure {
+top: -100px;
+left: 50%;
+margin-left: -123px;
+position: fixed;
+height: 92px;
+width: 229px;
+background: url("../images/tetris/sure-bg.png") no-repeat scroll 0 0 transparent;
+}
+#sure p {
+font-family: 'Conv_FuturaStd-Condensed';
+text-align: center;
+text-transform: uppercase;
+color: #3e3e3e;
+font-size: 18px;
+margin-top: 19px;
+}
+#sure p.smaller {
+font-family: 'Conv_FuturaStd-Medium';
+text-align: center;
+text-transform: none;
+color: #3e3e3e;
+font-size: 12px;
+margin-top: 2px;
+}
+#sure-btns {
+margin: 2px 0 0 36px;
+width: 229px;
+}
+#sure-btns a {
+margin-left: 2px;
+width: 75px;
+float: left;
+height: 32px;
+}
+#sure-btns a:hover {
+background-position: -75px 0;
+}
+/* =============== */
+/* = Pause/Play = */
+/* =============== */
+#pp {
+display: none;
+opacity: 0;
+-moz-opacity: 0;
+filter: alpha(opacity=0);
+height: 91px;
+left: 50%;
+margin-left: -74px;
+position: fixed;
+top: 223px;
+width: 86px;
+}
+#btn-14 {
+background: url("../images/tetris/pp.png") no-repeat scroll 0 0 transparent;
+height: 91px;
+width: 86px;
+display: block;
+}
+#btn-14:hover {
+background-position: -85px 0;
+}
+/* ======== */
+/* = Mask = */
+/* ======== */
+#mask {
+display: none;
+position: absolute;
+background-color: rgb(0,0,0);
+opacity: 0;
+-moz-opacity: 0;
+filter: alpha(opacity=0);
+width: 100%;
+height: 100%;
+}
+/* ======= */
+/* = Hpt = */
+/* ======= */
+#htp {
+padding-top: 50px;
+font-family: 'Conv_FuturaStd-Medium';
+text-align: center;
+text-transform: none;
+color: #5b5a5a;
+font-size: 12px;
+top: -600px;
+left: 50%;
+margin-left: -194px;
+position: fixed;
+height: 547px;
+width: 389px;
+background: url("../images/tetris/bg-htp.png") no-repeat scroll 0 0 transparent;
+}
+#htp img {
+margin-top: 14px;
+}
+#slideshow-htp-container img {
+position: absolute;
+left: 270px;
+bottom: 338px;
+opacity: 0;
+-moz-opacity: 0;
+filter: alpha(opacity=0);
+}
+#htp span {
+color: #7373c6;
+}
+#htp p {
+margin-top: 1px;
+}
+#slideshow-htp-container {
+height: 65px;
+padding: 0 55px;/*overflow:hidden;*/
+}
+#slideshow-htp {
+}
+#slideshow-htp-left {
+width: 23px;
+height: 37px;
+display: block;
+position: absolute;
+top: 210px;
+left: 30px;
+background: url("../images/tetris/arrow-left.png") no-repeat scroll -23px 0 transparent;
+}
+#slideshow-htp-left:hover {
+background-position: 0 0;
+}
+#slideshow-htp-right {
+width: 23px;
+height: 37px;
+display: block;
+position: absolute;
+top: 205px;
+right: 30px;
+background: url("../images/tetris/arrow-right.png") no-repeat scroll 0 0 transparent;
+}
+#slideshow-htp-right:hover {
+background-position: -23px 0;
+}
+#htp-close {
+width: 40px;
+height: 31px;
+display: block;
+position: absolute;
+top: 3px;
+right: 3px;
+background: url("../images/tetris/close-btn.png") no-repeat scroll 0 0 transparent;
+}
+#htp-close:hover {
+background-position: -42px 0;
+}
+#topic-3 {
+margin-top: 10px;
+}
+#topic-4 img {
+margin-right: 15px;
+}
+/* ================== */
+/* = FACEBOOK TESTS = */
+/* ================== */
