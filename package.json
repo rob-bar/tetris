@@ -1,0 +1,27 @@
+{
+  "name": "tetris",
+  "version": "1.0.0",
+  "description": "A tertris game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rob-bar/tetris.git"
+  },
+  "keywords": [
+    "Tetris",
+    "Javascript",
+    "(es2015)",
+    "css",
+    "html",
+    "canvas"
+  ],
+  "author": "Robbie Bardijn",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/rob-bar/tetris/issues"
+  },
+  "homepage": "https://github.com/rob-bar/tetris#readme"
+}
